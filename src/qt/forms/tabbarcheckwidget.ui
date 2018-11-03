@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TabBarCheckWidget</class>
+ <widget class="QWidget" name="TabBarCheckWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1072</width>
+    <height>83</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TabBarCheckWidget</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="0">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="TabBarWidget" native="true">
+     <property name="styleSheet">
+      <string notr="true">#TabBarWidget{
+	border-image: url(:/images/bar_bg.png);
+	border-right: 640px;
+	max-height:83px;
+	min-height:83px;
+}</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,0,0">
+      <property name="leftMargin">
+       <number>3</number>
+      </property>
+      <property name="bottomMargin">
+       <number>13</number>
+      </property>
+      <item alignment="Qt::AlignVCenter">
+       <widget class="QWidget" name="BarContainer" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+
+
+#BarContainer{
+	border-image: url(:/images/bar_container.png);	
+	border-left:16px;
+	border-right:16px;
+	max-height:38px;
+	min-height:38px;
+}
+
+#BarContainer QPushButton{
+	border-style: none;
+	border: 0px;
+	color: #FFFFFF;
+	padding-left:55px;
+	padding-right:55px;
+    padding-top:0px;
+	padding-bottom:0px;
+	min-height:34px;
+	max-height:34px;
+	
+	border-radius:13px;
+	icon-size:24px;
+	background:transparent;
+	
+}
+
+#BarContainer QPushButton:checked{
+	/*黄色*/
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #ebce00, stop:1 #f6e900);
+	color: black; 
+}
+
+#BarContainer QPushButton:hover{ 
+	color: black;
+	
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #ffde00, stop:1 #fff000);
+}
+
+#BarContainer QPushButton:pressed{ 
+	background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #eee100, stop:1 #d9bd00);
+}</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="spacing">
+          <number>4</number>
+         </property>
+         <property name="leftMargin">
+          <number>4</number>
+         </property>
+         <property name="topMargin">
+          <number>2</number>
+         </property>
+         <property name="rightMargin">
+          <number>4</number>
+         </property>
+         <property name="bottomMargin">
+          <number>4</number>
+         </property>
+         <item alignment="Qt::AlignVCenter">
+          <widget class="QPushButton" name="pushButton_0">
+           <property name="toolTip">
+            <string>Show general overview of wallet</string>
+           </property>
+           <property name="statusTip">
+            <string>Show general overview of wallet</string>
+           </property>
+           <property name="text">
+            <string>&amp;Overview</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../bitcoin.qrc">
+             <normaloff>:/icons/overview</normaloff>:/icons/overview</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_1">
+           <property name="toolTip">
+            <string>Send coins to a Runner address</string>
+           </property>
+           <property name="statusTip">
+            <string>Send coins to a Runner address</string>
+           </property>
+           <property name="text">
+            <string>&amp;Send</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../bitcoin.qrc">
+             <normaloff>:/icons/send</normaloff>:/icons/send</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="toolTip">
+            <string>Request payments (generates QR codes and runner: URIs)</string>
+           </property>
+           <property name="statusTip">
+            <string>Request payments (generates QR codes and runner: URIs)</string>
+           </property>
+           <property name="text">
+            <string>&amp;Receive</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../bitcoin.qrc">
+             <normaloff>:/icons/receiving_addresses</normaloff>:/icons/receiving_addresses</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_3">
+           <property name="toolTip">
+            <string>Browse transaction history</string>
+           </property>
+           <property name="statusTip">
+            <string>Browse transaction history</string>
+           </property>
+           <property name="text">
+            <string>&amp;Transactions</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../bitcoin.qrc">
+             <normaloff>:/icons/history</normaloff>:/icons/history</iconset>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>160</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../bitcoin.qrc"/>
+ </resources>
+ <connections/>
+</ui>
