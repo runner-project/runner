@@ -1,7 +1,7 @@
 Runner Core integration/staging tree
 =====================================
 
-https://runner.org
+http://www.runner.kim/
 
 What is Runner?
 ----------------
